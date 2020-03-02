@@ -7,4 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-tom = User.new()
+tom = User.new(name: "Tom")
