@@ -10,6 +10,7 @@ avi = User.create(name: "Avi", role: "Host")
 tom = User.create(name: "Tom", role: "Host")
 dan = User.create(name: "Dan", role: "Guest")
 
+
 hike = Activity.create(title: "Greenbelt Hike", description: "Explore the trails along Austin's greenbelt.")
 brunch = Activity.create(title: "Brunch", description: "Try out some of Austin's best restaurants, not too early and never too late.")
 
