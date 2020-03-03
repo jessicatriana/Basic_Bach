@@ -1,0 +1,11 @@
+<h1>All Activities: </h1>
+<% @activities.each do |activity| %>
+<br>
+<strong><%= link_to activity.title, activity_path(activity) %>: </strong>
+
+<%= activity.description %> 
+<br>
+<% end %>
+
+<br><br>
+<%= link_to 'Create a New Activity', new_activity_path %>
