@@ -1,7 +1,9 @@
 <h1><%= @user.name %></h1>
 <%= @user.role %>
 <br>
-<%= @user.events  %>
+<% @user.events.each do |event|  %>
+<%= event.event_name %>
+<% end %>
 
 
 <br>

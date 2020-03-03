@@ -5,9 +5,10 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    @user = User.find(params[:id])
+    @user = User.find(event_params[:user_ids])
+
     if @event.save
-      @user.events << @event
+      @user.events << @event unless @user.events.include? @event
       redirect_to event_path(@event)
     else
       render :new
@@ -16,11 +17,9 @@ class EventsController < ApplicationController
 
   def edit
     @event = Event.find(params[:id])
-   
   end
 
   def update
-
     @event = Event.find(params[:id])
     @activity = Activity.find(event_params[:activity_ids])
 
