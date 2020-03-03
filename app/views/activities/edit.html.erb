@@ -1,2 +1,19 @@
-<h1>Activity#edit</h1>
-<p>Find me in app/views/activity/edit.html.erb</p>
+<h1>Edit an Activity:</h1>
+<%= form_for(@activity) do |f| %>
+<%= f.label :title %>
+<br>
+<%= f.text_field :title %>
+<br><br>
+<%= f.label :description %>
+<br>
+<%= f.text_area :description %>
+<br><br>
+<%= f.submit %>
+
+<% end %>
+<br><br>
+<%= link_to "Delete Activity", activity_path, method: :delete, data: {confirm: "You sure?"} %>
+
+<br><br>
+
+<%= link_to 'Activities Index', activities_path %>

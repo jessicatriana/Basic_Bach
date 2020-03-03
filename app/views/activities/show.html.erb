@@ -1,2 +1,7 @@
-<h1>Activity#show</h1>
-<p>Find me in app/views/activity/show.html.erb</p>
+<h1>Activity <%= @activity.id %>: </h1> 
+<strong><%= @activity.title %></strong>
+<br><br>
+<%= @activity.description%>
+
+<br><br>
+<%= link_to 'Activities Index', activities_path %>
