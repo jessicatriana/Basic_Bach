@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @event = Event.find(user_params[:activity_ids])
+    @event = Event.find(user_params[:event_ids])
 
 
     if @user.valid?
