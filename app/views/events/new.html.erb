@@ -1,0 +1,23 @@
+<h1>Create Event</h1>
+<%= form_for @event do |f| %>
+<%= f.label :event_name, "Event Name" %>
+<%= f.text_field :event_name %>
+<br>
+<br>
+<%= f.label :description %>
+<%= f.text_field :description %>
+<br>
+<br>
+<%= f.label :start_date %>
+<%= f.text_field :start_date %>
+<br>
+<br>
+<%= f.label :end_date %>
+<%= f.text_field :end_date %>
+<br>
+<br>
+<%= f.submit %>
+<% end %>
+<br>
+<br>
+<%= link_to "Back", users_path %>

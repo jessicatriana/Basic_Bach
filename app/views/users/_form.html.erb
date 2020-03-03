@@ -1,0 +1,9 @@
+<%= f.label :name, "Full Name" %>
+<%= f.text_field :name %>
+<br>
+<br>
+<%= f.label :role %>
+<%= f.select :role, options_for_select(["Host", "Guest"]) %>
+<br>
+<br>
+<%= f.submit %>

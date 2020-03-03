@@ -1,0 +1,7 @@
+<h1>Events Index</h1>
+<% @events.each do |event| %>
+<%= link_to event.event_name, event_path(event) %><br>
+<%end%>
+<br>
+<%= link_to "Add Event", new_event_path %> | 
+<%= link_to "Users", users_path %> | 

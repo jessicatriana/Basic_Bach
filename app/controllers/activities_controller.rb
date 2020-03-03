@@ -1,4 +1,4 @@
-class EventController < ApplicationController
+class ActivitiesController < ApplicationController
   def new
   end
 
