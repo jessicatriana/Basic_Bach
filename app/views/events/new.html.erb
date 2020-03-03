@@ -1,11 +1,12 @@
 <h1>Create Event</h1>
 <%= form_for @event do |f| %>
+<%= f.hidden_field :user_id, :value => @user.id %>
 <%= f.label :event_name, "Event Name" %>
 <%= f.text_field :event_name %>
 <br>
 <br>
 <%= f.label :description %>
-<%= f.text_field :description %>
+<%= f.text_area :description %>
 <br>
 <br>
 <%= f.label :start_date %>
@@ -16,6 +17,12 @@
 <%= f.text_field :end_date %>
 <br>
 <br>
+<%= f.label :users %>
+<%= f.collection_select :user_ids, User.all, :id, :name, prompt: true %>
+<br><br>
+<%= f.label :activities %>
+<%= f.collection_select :activity_ids, Activity.all, :id, :title, prompt: true %>
+<br><br>
 <%= f.submit %>
 <% end %>
 <br>

@@ -8,6 +8,10 @@
 <%= f.select :role, options_for_select(["Host", "Guest"]) %>
 <br>
 <br>
+
+<%= f.label :events %>
+<%= f.collection_select :event_ids, Event.all, :id, :event_name, prompt: true %>
+<br>
 <%= f.submit %>
 <% end %>
 <br>

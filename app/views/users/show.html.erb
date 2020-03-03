@@ -1,6 +1,10 @@
 <h1><%= @user.name %></h1>
 <%= @user.role %>
 <br>
+<%= @user.events  %>
+
+
+<br>
 <br>
 <%= link_to "Edit", edit_user_path %> | 
 <%= link_to "Delete", @user, :method => :delete %> | 
