@@ -1,4 +1,4 @@
 class EventActivity < ApplicationRecord
-    belongs_to :event 
-    belongs_to :user
+    belongs_to :event, dependent: :destroy
+    belongs_to :user, dependent: :destroy
 end

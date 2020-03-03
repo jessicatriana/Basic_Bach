@@ -1,7 +1,4 @@
-<h1>User Index</h1>
-<% @users.each do |user| %>
-<%= link_to user.name, user_path(user) %><br>
+r<h1>User Index</h1>
+<%= @user.each do |user| %>
+<%= link_to user.name, user_path(user) %>
 <%end%>
-<br>
-<%= link_to "Join", new_user_path %> | 
-<%= link_to "Events", events_path %>
