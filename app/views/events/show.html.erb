@@ -1,6 +1,18 @@
 <h1><%= @event.event_name %></h1>
 <%= @event.description %>
 <br>
+<ul>
+<%= puts @event.activities %>
+<% @event.activities.each do |activity| %>
+<li>
+
+<%= activity.title %>
+<% end %>
+</li>
+
+
+
+
 <br>
 <%= link_to "Edit", edit_event_path %> | 
 <%= link_to "Delete", @event, :method => :delete %> | 

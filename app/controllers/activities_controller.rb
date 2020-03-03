@@ -38,12 +38,12 @@ class ActivitiesController < ApplicationController
   def destroy
     @activity = Activity.find(params[:id])
     @activity.destroy
-    render 'index'
+    redirect_to root_path
   end
 
   private
 
   def activity_params 
-    params.require(:activity).permit(:event_id, :title, :description)
+    params.require(:activity).permit(:title, :description)
   end
 end
