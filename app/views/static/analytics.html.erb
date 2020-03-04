@@ -2,7 +2,17 @@
 <body style="background-color: #008080;">
 <h1>ANALYTICS</h1>
 <h4>Let's see how things stack up:</h4>
-<br><br>
+<br>
+ <% @events = Event.all %>
+RSVP's :
+       <% @events.each do |event| %> 
+          <%  if event.users.count > 0 %> 
+              <%=  event.event_name %> :
+            <%=  event.users.count %> 
+           <%  end %> 
+           <br>
+        <%  end %> 
+
 * Most Popular Party : 
 <br><br>
  * Total Users :
@@ -12,5 +22,10 @@
 * Total Activities : 
 <br><br>
 * First Party of the Year :
+
+<br><br>
+        
+
+ 
 
 </body>

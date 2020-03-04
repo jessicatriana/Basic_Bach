@@ -25,3 +25,4 @@ doug_party = Event.create(event_name: "Doug's Bachelor Party", start_date: "May 
 toms_party = Event.create(event_name: "Tom's Bachelor Party", start_date: "Feb 3 2020", end_date: "Feb 18 2020", description: "The best way to reassure a friend ")
 dans_party = Event.create(event_name: "Dan's Bachelor Party", start_date: "Mar 8 2020", end_date: "Mar 11 2020", description: "Let's celebrate Dan's third marriage the right way!")
 
+eventactivity1 = EventActivity.create(event_id: 1, activity_id:1 )
