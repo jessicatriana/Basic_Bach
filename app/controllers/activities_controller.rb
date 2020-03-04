@@ -1,13 +1,51 @@
 class ActivitiesController < ApplicationController
   def new
+    @activity = Activity.new
+  end
+
+  def create
+    @activity = Activity.new(activity_params)
+    @activities = Activity.all
+    if @activity.save
+      render 'index'
+    else  
+      render 'new'
+    end
   end
 
   def edit
+    @activity = Activity.find(params[:id])
+    @activities = Activity.all
   end
 
   def index
+    @activities = Activity.all
   end
 
   def show
+    @activity = Activity.find(params[:id])
+  end
+
+  def update
+    @activity = Activity.find(params[:id])
+    @event = Event.find(user_params[:event_ids])
+
+    if @activity.update_attributes(activity_params)
+      redirect_to @activity
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @activity = Activity.find(params[:id])
+    @activity.destroy
+    redirect_to root_path
+  end
+
+  private
+
+  def activity_params 
+    params.require(:activity).permit(:user_ids, :event_ids, :title, :description)
   end
 end

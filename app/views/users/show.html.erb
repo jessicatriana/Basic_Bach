@@ -1,2 +1,24 @@
+<<<<<<< HEAD
+<h1> ' </h1>
+  <br>
+<h1><%= @user.name %></h1>
+Role: <%= @user.role %>
+<br><br>
+Attending: 
+<ul>
+<% @user.events.each do |event|  %>
+
+<li>
+<%= event.event_name %>
+<% end %>
+
+</li>
+</ul>
+<br><br>
+| <%= link_to 'Edit User', edit_user_path %> |
+
+<%= link_to "Delete User", @user, :method => :delete %> | 
+=======
 <h1>User#show</h1>
 <p>Find me in app/views/user/show.html.erb</p>
+>>>>>>> 26919e5d1e053f8eb09fb93b333ba5f5066724bb

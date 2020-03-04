@@ -1,2 +1,30 @@
-<h1>Event#edit</h1>
-<p>Find me in app/views/event/edit.html.erb</p>
+<h1> ' </h1>
+  <br>
+<h1>Edit Event</h1>
+<br>
+<%= form_for @event do |f| %>
+
+<%= f.label :event_name, "Event Name" %>
+<%= f.text_field :event_name %>
+<br>
+<br>
+<%= f.label :description %>
+<%= f.text_area :description %>
+<br>
+<br>
+<%= f.label :start_date %>
+<%= f.text_field :start_date %>
+<br>
+<br>
+<%= f.label :end_date %>
+<%= f.text_field :end_date %>
+<br>
+<br>
+<%= f.label :activities %>
+<%= f.collection_select :activity_ids, Activity.all, :id, :title, prompt: true, activity_ids: [] %>
+<br><br>
+<%= f.label :users %>
+<%= f.collection_select :user_ids, User.all, :id, :name, prompt: true, user_ids: [] %>
+<br><br><br>
+<%= f.submit %>
+<% end %>

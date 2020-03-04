@@ -1,2 +1,10 @@
-<h1>Activity#show</h1>
-<p>Find me in app/views/activity/show.html.erb</p>
+<h1> ' </h1><br>
+<br><br>
+<%= image_tag("#{@activity.image}") %>
+<br><br>
+<%= @activity.description%>
+<br><br><br>
+
+| <%= link_to "Add New Activity", new_activity_path %> |  
+
+<%= link_to "Edit This Activity", edit_activity_path %> |

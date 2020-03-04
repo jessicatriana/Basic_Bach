@@ -1,2 +1,18 @@
-<h1>Activity#index</h1>
-<p>Find me in app/views/activity/index.html.erb</p>
+
+  <h1> ' </h1>
+  <br>
+<h1>ACTIVITIES </h1>
+<h4>(aka excuses to day drink)</h4>
+<br>
+<% @activities.each do |activity| %>
+<br>
+<strong> * <%= link_to activity.title, activity_path(activity) %> * </strong>
+
+<%= activity.description %> 
+<br>
+<% end %>
+<br><br>
+
+
+| <%= link_to "Add New Activity", new_activity_path %> | 
+

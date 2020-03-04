@@ -1,2 +1,24 @@
+<<<<<<< HEAD
+<h1> ' </h1>
+  <br>
+<h1>Create User</h1>
+<br>
+<%= form_for @user do |f| %>
+<%= f.label :name, "Full Name" %>
+<%= f.text_field :name %>
+<br>
+<br>
+<%= f.label :role %>
+<%= f.select :role, options_for_select(["Host", "Guest"]) %>
+<br>
+<br>
+
+<%= f.label :events %>
+<%= f.collection_select :event_ids, Event.all, :id, :event_name, prompt: true %>
+<br><br><br>
+<%= f.submit %>
+<% end %>
+=======
 <h1>User#new</h1>
 <p>Find me in app/views/user/new.html</p>
+>>>>>>> 26919e5d1e053f8eb09fb93b333ba5f5066724bb

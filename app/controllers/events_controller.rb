@@ -5,8 +5,10 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    if @event.valid?
-      @event.save
+    @user = User.find(event_params[:user_ids])
+
+    if @event.save
+      @user.events << @event unless @user.events.include? @event
       redirect_to event_path(@event)
     else
       render :new
@@ -14,14 +16,18 @@ class EventsController < ApplicationController
   end
 
   def edit
-    @event = User.find(params[:id])
+    @event = Event.find(params[:id])
   end
 
   def update
-    @event = User.find(params[:id])
-    @event.update(user_params)
+    @event = Event.find(params[:id])
+    @activity = Activity.find(event_params[:activity_ids])
+    @user = User.find(event_params[:user_ids])
+
     if @event.valid?
-      @event.save
+      @event.activities << @activity unless @event.activities.include? @activity
+      @user.events << @event unless @user.events.include? @event
+
       redirect_to event_path(@event)
     else
       render :edit
@@ -34,6 +40,12 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @activities = Activity.all
+  end
+
+  def edit
+    @event = Event.find(params[:id])
+   
   end
 
   def destroy
@@ -42,10 +54,13 @@ class EventsController < ApplicationController
     redirect_to events_path
   end
 
+  
+
   private
 
-  def user_params
-  params.require(:event).permit(:start_date, :end_date, :event_name, :description)
+  def event_params
+    
+  params.require(:event).permit(:activity_ids, :user_ids, :start_date, :end_date, :event_name, :description)
   end
 
 end

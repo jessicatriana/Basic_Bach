@@ -1,2 +1,40 @@
+<<<<<<< HEAD
+<h1> ' </h1>
+<br>
+<h1><%= @event.event_name %></h1>
+<h4><%= @event.description %></h4>
+<br><br>
+<strong>ACTIVITIES : </strong>
+<br>
+  <% @event.activities.each do |activity| %>
+ 
+    <%= activity.title %>
+     <br>
+    <% end %>
+<br>
+
+<strong>RSVPs :</strong>
+<br>
+  <% @event.users.each do |user| %>
+
+    <%= user.name %>
+<br>
+    <% end %>
+
+<br><br>
+
+
+| <%= link_to "Add Event", new_event_path %> | 
+
+<%= link_to "Edit Event",  edit_event_path %> |
+
+<%= link_to "Delete Event", @event, :method => :delete %> | 
+
+
+
+
+
+=======
 <h1>Event#show</h1>
 <p>Find me in app/views/event/show.html.erb</p>
+>>>>>>> 26919e5d1e053f8eb09fb93b333ba5f5066724bb
