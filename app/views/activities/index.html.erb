@@ -1,22 +1,18 @@
- <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <title>Basic Bach</title>
-  </head>
-  
-<h1>All Activities: </h1>
+  <h1> ' </h1>
+  <br>
+<h1>ACTIVITIES </h1>
+<h4>(aka excuses to day drink)</h4>
+<br>
 <% @activities.each do |activity| %>
 <br>
-<strong><%= link_to activity.title, activity_path(activity) %>: </strong>
+<strong> * <%= link_to activity.title, activity_path(activity) %> * </strong>
 
 <%= activity.description %> 
 <br>
 <% end %>
-
 <br><br>
-<%= link_to 'Create a New Activity', new_activity_path %>
+
+
+| <%= link_to "Add New Activity", new_activity_path %> | 
+

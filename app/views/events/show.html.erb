@@ -1,19 +1,37 @@
+<h1> ' </h1>
+<br>
 <h1><%= @event.event_name %></h1>
-<%= @event.description %>
-<br>
+<h4><%= @event.description %></h4>
+<br><br>
+Activities : 
 <ul>
-<%= puts @event.activities %>
-<% @event.activities.each do |activity| %>
-<li>
-
-<%= activity.title %>
-<% end %>
-</li>
-
-
-
-
+  <% @event.activities.each do |activity| %>
+    <li>
+    <%= activity.title %>
+    <br>
+    <% end %>
+    </li>
+</ul>
 <br>
-<%= link_to "Edit", edit_event_path %> | 
-<%= link_to "Delete", @event, :method => :delete %> | 
-<%= link_to "All Events", events_path %>
+RSVPs :
+<ul>
+  <% @event.users.each do |user| %>
+    <li>
+    <%= user.name %>
+    <br>
+    <% end %>
+    </li>
+</ul>
+<br><br>
+
+
+| <%= link_to "Add Event", new_event_path %> | 
+
+<%= link_to "Edit Event",  edit_event_path %> |
+
+<%= link_to "Delete Event", @event, :method => :delete %> | 
+
+
+
+
+

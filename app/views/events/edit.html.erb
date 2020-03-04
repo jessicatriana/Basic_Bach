@@ -1,4 +1,7 @@
+<h1> ' </h1>
+  <br>
 <h1>Edit Event</h1>
+<br>
 <%= form_for @event do |f| %>
 
 <%= f.label :event_name, "Event Name" %>
@@ -20,8 +23,8 @@
 <%= f.label :activities %>
 <%= f.collection_select :activity_ids, Activity.all, :id, :title, prompt: true, activity_ids: [] %>
 <br><br>
+<%= f.label :users %>
+<%= f.collection_select :user_ids, User.all, :id, :name, prompt: true%>
+<br><br><br>
 <%= f.submit %>
 <% end %>
-<br>
-<br>
-<%= link_to "Back", users_path %>
