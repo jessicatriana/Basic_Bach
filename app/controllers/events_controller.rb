@@ -22,9 +22,11 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
     @activity = Activity.find(event_params[:activity_ids])
+    @user = User.find(event_params[:user_ids])
 
     if @event.valid?
       @event.activities << @activity unless @event.activities.include? @activity
+      @user.events << @event unless @user.events.include? @event
 
       redirect_to event_path(@event)
     else
@@ -51,6 +53,8 @@ class EventsController < ApplicationController
     @event.destroy
     redirect_to events_path
   end
+
+  
 
   private
 

@@ -6,16 +6,14 @@ Role: <%= @user.role %>
 Attending: 
 <ul>
 <% @user.events.each do |event|  %>
+
 <li>
-
 <%= event.event_name %>
-
 <% end %>
+
 </li>
 </ul>
-<br>
-<br>
+<br><br>
 | <%= link_to 'Edit User', edit_user_path %> |
 
 <%= link_to "Delete User", @user, :method => :delete %> | 
-

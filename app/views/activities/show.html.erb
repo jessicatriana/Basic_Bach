@@ -1,19 +1,10 @@
-<h1> ' </h1>
-  <br>
-<h1><%= @activity.title  %> </h1> 
-<br>
-<%= image_tag("greenbelt.jpg") %>
-<br>
-
-<br>
-<%= @activity.description%>
-
+<h1> ' </h1><br>
 <br><br>
-<br>
+<%= image_tag("#{@activity.image}") %>
+<br><br>
+<%= @activity.description%>
+<br><br><br>
 
 | <%= link_to "Add New Activity", new_activity_path %> |  
 
 <%= link_to "Edit This Activity", edit_activity_path %> |
-
-
-

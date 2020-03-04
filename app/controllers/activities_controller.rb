@@ -28,6 +28,8 @@ class ActivitiesController < ApplicationController
 
   def update
     @activity = Activity.find(params[:id])
+    @event = Event.find(user_params[:event_ids])
+
     if @activity.update_attributes(activity_params)
       redirect_to @activity
     else
@@ -44,6 +46,6 @@ class ActivitiesController < ApplicationController
   private
 
   def activity_params 
-    params.require(:activity).permit(:title, :description)
+    params.require(:activity).permit(:user_ids, :event_ids, :title, :description)
   end
 end
