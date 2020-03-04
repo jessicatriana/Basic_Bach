@@ -3,29 +3,46 @@
 <h1>ANALYTICS</h1>
 <h4>Let's see how things stack up:</h4>
 <br>
+
+<%= image_tag("math.gif", :size => '600x300', :align=> "center")%>
  <% @events = Event.all %>
-RSVP's :
-   
-
-* Most Popular Party : 
-<br><br>
- * Total Users :
-<br><br>
-* Total Events :
-<br><br>
-* Total Activities : 
-<br><br>
-* First Party of the Year :
-
-<br><br>
-        
+<div id='RSVPs'> <span><h6><strong>* RSVP's *</strong></h6>
 
      <% @events.each do |event| %> 
-          <%  if event.users.count > 0 %> 
+     
+ 
+          
               <%=  event.event_name %> :
             <%=  event.users.count %> 
-           <%  end %> 
+  
            <br>
         <%  end %> 
+<br>
+</span>
 
+</div>
+<h6><strong>* Basic Bach App Data *</strong></h6>
+ <strong> Total Users :</strong>
+<% @users = User.all %>
+<%= @users.count %>
+<br>
+
+ <strong> Total Events :</strong>
+<% @events = Event.all %>
+<%= @events.count %>
+<br>
+ <strong> Total Activities :</strong>
+<% @activities = Activity.all %>
+<%= @activities.count %>
+<br><br>
+
+<h6><strong>* Calendar of Events *</strong></h6>
+<% @events = Event.all %>
+<% @events.each do |event| %>
+<strong><%= event.start_date %> :
+<%= event.event_name %>
+<br>
+<% end %>
+
+<br>
 </body>
