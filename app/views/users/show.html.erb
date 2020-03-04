@@ -3,7 +3,7 @@
 <br>
 <% @user.events.each do |event|  %>
 <br>
-<%= event.event_name %>
+<%= link_to event.event_name, event_path(event) %>
 <% end %>
 
 
