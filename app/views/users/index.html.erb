@@ -1,7 +1,16 @@
-<h1>User Index</h1>
-<% @users.each do |user| %>
-<%= link_to user.name, user_path(user) %><br>
-<%end%>
+<h1> ' </h1>
+  <br>
+<h1>USERS</h1>
+<h4>The who's who</h4>
 <br>
-<%= link_to "Join", new_user_path %> | 
-<%= link_to "Events", events_path %>
+<% @users.each do |user| %>
+<br>
+<strong> * <%= link_to user.name, user_path(user) %></strong>
+ * <%= user.role %>
+ <br>
+<%end%>
+<br><br>
+
+
+| <%= link_to "Add New User", new_user_path %> | 
+

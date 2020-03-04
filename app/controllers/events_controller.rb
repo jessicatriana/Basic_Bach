@@ -41,6 +41,11 @@ class EventsController < ApplicationController
     @activities = Activity.all
   end
 
+  def edit
+    @event = Event.find(params[:id])
+   
+  end
+
   def destroy
     @event = Event.find(params[:id])
     @event.destroy

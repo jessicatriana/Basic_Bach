@@ -1,4 +1,7 @@
-<h1>Edit an Activity:</h1>
+<body style="background-color: #008080;">
+<h1> ' </h1>
+  <br><br>
+<h1>Edit Activity <%= @activity.id %>:</h1>
 <%= form_for(@activity) do |f| %>
 <%= f.label :title %>
 <br>
@@ -12,8 +15,11 @@
 
 <% end %>
 <br><br>
-<%= link_to "Delete Activity", activity_path, method: :delete, data: {confirm: "You sure?"} %>
 
-<br><br>
 
-<%= link_to 'Activities Index', activities_path %>
+
+
+
+| <%= link_to "Delete This Activity", activity_path, method: :delete, data: {confirm: "You sure?"} %> |
+
+</body>

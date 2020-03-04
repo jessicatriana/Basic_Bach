@@ -1,14 +1,27 @@
+<h1> ' </h1>
+  <br>
 <h1><%= @user.name %></h1>
-<h3>Role:</h3> <%= @user.role %>
-<br>
+Role: <%= @user.role %>
+<br><br>
+Attending: 
+<ul>
 <% @user.events.each do |event|  %>
+<<<<<<< HEAD
 <br>
 <%= link_to event.event_name, event_path(event) %>
 <% end %>
+=======
+<li>
+>>>>>>> Jess_Dev
 
+<%= event.event_name %>
 
+<% end %>
+</li>
+</ul>
 <br>
 <br>
-<%= link_to "Edit", edit_user_path %> | 
-<%= link_to "Delete", @user, :method => :delete %> | 
-<%= link_to "All Users", users_path %>
+| <%= link_to 'Edit User', edit_user_path %> |
+
+<%= link_to "Delete User", @user, :method => :delete %> | 
+

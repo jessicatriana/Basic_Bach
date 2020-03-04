@@ -1,4 +1,7 @@
+<h1> ' </h1>
+  <br>
 <h1>Create User</h1>
+<br>
 <%= form_for @user do |f| %>
 <%= f.label :name, "Full Name" %>
 <%= f.text_field :name %>
@@ -11,9 +14,6 @@
 
 <%= f.label :events %>
 <%= f.collection_select :event_ids, Event.all, :id, :event_name, prompt: true %>
-<br>
+<br><br><br>
 <%= f.submit %>
 <% end %>
-<br>
-<br>
-<%= link_to "Back", users_path %>
