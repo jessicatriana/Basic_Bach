@@ -37278,6 +37278,395 @@ Processing by ActivitiesController#index as HTML
 Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.2ms | Allocations: 5242)
 
 
+<<<<<<< HEAD
+Started GET "/users/2" for ::1 at 2020-03-04 14:45:47 -0600
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:9
+  Rendered users/show.html.erb within layouts/application (Duration: 58.6ms | Allocations: 8189)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 2.0ms | Allocations: 113)
+Completed 200 OK in 237ms (Views: 206.0ms | ActiveRecord: 2.1ms | Allocations: 52801)
+
+
+Started GET "/" for ::1 at 2020-03-04 14:45:50 -0600
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 700)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.0ms | Allocations: 5473)
+
+
+Started GET "/" for ::1 at 2020-03-04 14:47:47 -0600
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 689)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 110)
+Completed 200 OK in 33ms (Views: 29.4ms | ActiveRecord: 0.0ms | Allocations: 6069)
+
+
+Started GET "/activities" for ::1 at 2020-03-04 14:47:49 -0600
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/activities/index.html.erb:7
+  Rendered activities/index.html.erb within layouts/application (Duration: 33.6ms | Allocations: 5074)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 49ms (Views: 42.9ms | ActiveRecord: 0.6ms | Allocations: 11066)
+
+
+Started GET "/activities/1" for ::1 at 2020-03-04 14:47:50 -0600
+Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:26:in `show'
+  Rendering activities/show.html.erb within layouts/application
+  Rendered activities/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 842)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.2ms | Allocations: 5767)
+
+
+Started GET "/events" for ::1 at 2020-03-04 14:47:52 -0600
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:7
+  Rendered events/index.html.erb within layouts/application (Duration: 15.2ms | Allocations: 4938)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 0.4ms | Allocations: 9744)
+
+
+Started GET "/events/2" for ::1 at 2020-03-04 14:47:53 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:42:in `show'
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1917)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms | Allocations: 3218)
+
+
+  
+SyntaxError (/Users/dougharrison/Desktop/Basic_Bach/app/models/event_activity.rb:2: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/Users/dougharrison/Desktop/Basic_Bach/app/models/event_activity.rb:5: syntax error, unexpected ===, expecting end
+=======
+^~~
+/Users/dougharrison/Desktop/Basic_Bach/app/models/event_activity.rb:8: syntax error, unexpected >>, expecting end
+>>>>>>> 26919e5d1e053f8eb09fb93...
+^~):
+  
+app/models/event_activity.rb:2: syntax error, unexpected <<
+app/models/event_activity.rb:5: syntax error, unexpected ===, expecting end
+app/models/event_activity.rb:8: syntax error, unexpected >>, expecting end
+app/models/event_activity.rb:2: syntax error, unexpected <<
+app/models/event_activity.rb:5: syntax error, unexpected ===, expecting end
+app/models/event_activity.rb:8: syntax error, unexpected >>, expecting end
+app/models/event_activity.rb:2: syntax error, unexpected <<
+app/models/event_activity.rb:5: syntax error, unexpected ===, expecting end
+app/models/event_activity.rb:8: syntax error, unexpected >>, expecting end
+app/views/events/show.html.erb:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200302212137)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "role" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200302212137"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateActivities (20200302212205)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "activities" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200302212205"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEvents (20200302212329)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "start_date" varchar, "end_date" varchar, "event_name" varchar, "description" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200302212329"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUserEvents (20200302212527)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "user_events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "event_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200302212527"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEventActivities (20200302212546)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "event_activities" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "event_id" integer, "activity_id" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200302212546"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddImageToActivities (20200304175048)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "activities" ADD "image" varchar[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200304175048"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddProfilePhotosToUsers (20200304204942)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "users" ADD "image" varchar[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200304204942"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-04 20:53:48.518788"], ["updated_at", "2020-03-04 20:53:48.518788"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Hilda Bumbletuna"], ["role", "Host"], ["created_at", "2020-03-04 21:34:23.265274"], ["updated_at", "2020-03-04 21:34:23.265274"], ["image", "https://images.unsplash.com/photo-1566147752388-941d9c4e224f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Neddie Spaghettie"], ["role", "Host"], ["created_at", "2020-03-04 21:34:23.293875"], ["updated_at", "2020-03-04 21:34:23.293875"], ["image", "https://images.unsplash.com/photo-1578436956257-b0307ac46a3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ronda Skoopinhymer"], ["role", "Guest"], ["created_at", "2020-03-04 21:34:23.297902"], ["updated_at", "2020-03-04 21:34:23.297902"], ["image", "https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Lia Peeples"], ["role", "Guest"], ["created_at", "2020-03-04 21:34:23.302148"], ["updated_at", "2020-03-04 21:34:23.302148"], ["image", "https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wilda Beauregard"], ["role", "Guest"], ["created_at", "2020-03-04 21:34:23.307484"], ["updated_at", "2020-03-04 21:34:23.307484"], ["image", "https://images.unsplash.com/photo-1534945773093-1119ae5684ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Tillie McNillie"], ["role", "Guest"], ["created_at", "2020-03-04 21:34:23.312159"], ["updated_at", "2020-03-04 21:34:23.312159"], ["image", "https://images.unsplash.com/photo-1530577197743-7adf14294584?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jillbo Noopers"], ["role", "Guest"], ["created_at", "2020-03-04 21:34:23.315966"], ["updated_at", "2020-03-04 21:34:23.315966"], ["image", "https://images.unsplash.com/photo-1520179525699-c88200fde0cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Sleepy Gary"], ["role", "Guest"], ["created_at", "2020-03-04 21:34:23.319851"], ["updated_at", "2020-03-04 21:34:23.319851"], ["image", "https://images.unsplash.com/photo-1506919258185-6078bba55d2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Nathanial Lomax"], ["role", "Guest"], ["created_at", "2020-03-04 21:34:23.325351"], ["updated_at", "2020-03-04 21:34:23.325351"], ["image", "https://images.unsplash.com/photo-1561683193-d56e5c701ab4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyatt WhiteClaw"], ["role", "Guest"], ["created_at", "2020-03-04 21:34:23.329064"], ["updated_at", "2020-03-04 21:34:23.329064"], ["image", "https://images.unsplash.com/photo-1562045726-c54c4d58b602?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Lil Big Steve"], ["role", "Guest"], ["created_at", "2020-03-04 21:34:23.332547"], ["updated_at", "2020-03-04 21:34:23.332547"], ["image", "https://images.unsplash.com/photo-1561683193-d56e5c701ab4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Filiberto Hudgins"], ["role", "Guest"], ["created_at", "2020-03-04 21:34:23.336582"], ["updated_at", "2020-03-04 21:34:23.336582"], ["image", "https://images.unsplash.com/photo-1508954528226-0b941060b8bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Greenbelt Hike"], ["description", "Explore the trails along Austin's greenbelt."], ["created_at", "2020-03-04 21:34:23.349913"], ["updated_at", "2020-03-04 21:34:23.349913"], ["image", "greenbelt.jpg"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Brunch"], ["description", "Try out some of Austin's best restaurants, not too early and never too late."], ["created_at", "2020-03-04 21:34:23.354100"], ["updated_at", "2020-03-04 21:34:23.354100"], ["image", "brunch.jpg"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "ACL"], ["description", "Best outdoor music fest in Austin!"], ["created_at", "2020-03-04 21:34:23.359524"], ["updated_at", "2020-03-04 21:34:23.359524"], ["image", "acl.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "SXSW"], ["description", "Watch Austin come alive with music, drinks, and event everywhere!"], ["created_at", "2020-03-04 21:34:23.363184"], ["updated_at", "2020-03-04 21:34:23.363184"], ["image", "sxsw.jpg"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Rainy St"], ["description", "Renovated houses turned into bungalow bars reign supreme, stroll from bars to food trailers to bars again"], ["created_at", "2020-03-04 21:34:23.367196"], ["updated_at", "2020-03-04 21:34:23.367196"], ["image", "rainy.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.4ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Dirty 6"], ["description", "Where Univerity of Texas, Downtown Austin, and chaos meet for a night you won't remember!"], ["created_at", "2020-03-04 21:34:23.371240"], ["updated_at", "2020-03-04 21:34:23.371240"], ["image", "dirty.jpg"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.4ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "West 6"], ["description", "A lot like dirty 6, but with more money!"], ["created_at", "2020-03-04 21:34:23.376446"], ["updated_at", "2020-03-04 21:34:23.376446"], ["image", "west.jpg"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "East Austin"], ["description", "Bars, restaurants, food trucks, and country music. You could spend an entire day here!"], ["created_at", "2020-03-04 21:34:23.393288"], ["updated_at", "2020-03-04 21:34:23.393288"], ["image", "east.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Lake Travis"], ["description", "Rent a party boat and hit the lake, Guns out, buns out!"], ["created_at", "2020-03-04 21:34:23.397219"], ["updated_at", "2020-03-04 21:34:23.397219"], ["image", "travis.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Lady Bird Lake"], ["description", "Tons of rental options to hit the river including paddle boarding, duck boats, and kayaking!"], ["created_at", "2020-03-04 21:34:23.401022"], ["updated_at", "2020-03-04 21:34:23.401022"], ["image", "lady.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.4ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Float the River"], ["description", "It's almost always float season in Austin, rent a party bus and enjoy a day of floating!"], ["created_at", "2020-03-04 21:34:23.405153"], ["updated_at", "2020-03-04 21:34:23.405153"], ["image", "float.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Antonio's Super Secret DJ Parties"], ["description", "Join Austin's favorite programmer, Antonio, as you spend a night attending Austin's most secret and exclusive abandoned warehouse parties!"], ["created_at", "2020-03-04 21:34:23.410154"], ["updated_at", "2020-03-04 21:34:23.410154"], ["image", "dj.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "end_date", "event_name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["start_date", "Apr 2 2020"], ["end_date", "Apr 7 2020"], ["event_name", "Avi's Bachelor Party"], ["description", "Yay Avi!"], ["created_at", "2020-03-04 21:34:23.425786"], ["updated_at", "2020-03-04 21:34:23.425786"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "end_date", "event_name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["start_date", "May 8 2020"], ["end_date", "May 11 2020"], ["event_name", "Doug's Bachelor Party"], ["description", "Party on Doug!"], ["created_at", "2020-03-04 21:34:23.429705"], ["updated_at", "2020-03-04 21:34:23.429705"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "end_date", "event_name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["start_date", "Feb 3 2020"], ["end_date", "Feb 18 2020"], ["event_name", "Tom's Bachelor Party"], ["description", "The best way to reassure a friend "], ["created_at", "2020-03-04 21:34:23.433995"], ["updated_at", "2020-03-04 21:34:23.433995"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "end_date", "event_name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["start_date", "Mar 8 2020"], ["end_date", "Mar 11 2020"], ["event_name", "Dan's Bachelor Party"], ["description", "Let's celebrate Dan's third marriage the right way!"], ["created_at", "2020-03-04 21:34:23.440617"], ["updated_at", "2020-03-04 21:34:23.440617"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200302212137)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "role" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200302212137"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateActivities (20200302212205)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "activities" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200302212205"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEvents (20200302212329)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "start_date" varchar, "end_date" varchar, "event_name" varchar, "description" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200302212329"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUserEvents (20200302212527)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "user_events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "event_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (3.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200302212527"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEventActivities (20200302212546)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "event_activities" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "event_id" integer, "activity_id" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200302212546"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddImageToActivities (20200304175048)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "activities" ADD "image" varchar[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200304175048"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddProfilePhotosToUsers (20200304204942)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "users" ADD "image" varchar[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200304204942"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-04 21:36:08.041073"], ["updated_at", "2020-03-04 21:36:08.041073"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Hilda Bumbletuna"], ["role", "Host"], ["created_at", "2020-03-04 21:36:15.052862"], ["updated_at", "2020-03-04 21:36:15.052862"], ["image", "https://images.unsplash.com/photo-1566147752388-941d9c4e224f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Neddie Spaghettie"], ["role", "Host"], ["created_at", "2020-03-04 21:36:15.058596"], ["updated_at", "2020-03-04 21:36:15.058596"], ["image", "https://images.unsplash.com/photo-1578436956257-b0307ac46a3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ronda Skoopinhymer"], ["role", "Guest"], ["created_at", "2020-03-04 21:36:15.062399"], ["updated_at", "2020-03-04 21:36:15.062399"], ["image", "https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Lia Peeples"], ["role", "Guest"], ["created_at", "2020-03-04 21:36:15.065928"], ["updated_at", "2020-03-04 21:36:15.065928"], ["image", "https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wilda Beauregard"], ["role", "Guest"], ["created_at", "2020-03-04 21:36:15.069562"], ["updated_at", "2020-03-04 21:36:15.069562"], ["image", "https://images.unsplash.com/photo-1534945773093-1119ae5684ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Tillie McNillie"], ["role", "Guest"], ["created_at", "2020-03-04 21:36:15.074588"], ["updated_at", "2020-03-04 21:36:15.074588"], ["image", "https://images.unsplash.com/photo-1530577197743-7adf14294584?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jillbo Noopers"], ["role", "Guest"], ["created_at", "2020-03-04 21:36:15.078528"], ["updated_at", "2020-03-04 21:36:15.078528"], ["image", "https://images.unsplash.com/photo-1520179525699-c88200fde0cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Sleepy Gary"], ["role", "Guest"], ["created_at", "2020-03-04 21:36:15.082158"], ["updated_at", "2020-03-04 21:36:15.082158"], ["image", "https://images.unsplash.com/photo-1506919258185-6078bba55d2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Nathanial Lomax"], ["role", "Guest"], ["created_at", "2020-03-04 21:36:15.085726"], ["updated_at", "2020-03-04 21:36:15.085726"], ["image", "https://images.unsplash.com/photo-1561683193-d56e5c701ab4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyatt WhiteClaw"], ["role", "Guest"], ["created_at", "2020-03-04 21:36:15.090513"], ["updated_at", "2020-03-04 21:36:15.090513"], ["image", "https://images.unsplash.com/photo-1562045726-c54c4d58b602?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Lil Big Steve"], ["role", "Guest"], ["created_at", "2020-03-04 21:36:15.094668"], ["updated_at", "2020-03-04 21:36:15.094668"], ["image", "https://images.unsplash.com/photo-1561683193-d56e5c701ab4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "role", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Filiberto Hudgins"], ["role", "Guest"], ["created_at", "2020-03-04 21:36:15.098183"], ["updated_at", "2020-03-04 21:36:15.098183"], ["image", "https://images.unsplash.com/photo-1508954528226-0b941060b8bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Greenbelt Hike"], ["description", "Explore the trails along Austin's greenbelt."], ["created_at", "2020-03-04 21:36:15.108702"], ["updated_at", "2020-03-04 21:36:15.108702"], ["image", "greenbelt.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Brunch"], ["description", "Try out some of Austin's best restaurants, not too early and never too late."], ["created_at", "2020-03-04 21:36:15.112388"], ["updated_at", "2020-03-04 21:36:15.112388"], ["image", "brunch.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "ACL"], ["description", "Best outdoor music fest in Austin!"], ["created_at", "2020-03-04 21:36:15.115986"], ["updated_at", "2020-03-04 21:36:15.115986"], ["image", "acl.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.7ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "SXSW"], ["description", "Watch Austin come alive with music, drinks, and event everywhere!"], ["created_at", "2020-03-04 21:36:15.119641"], ["updated_at", "2020-03-04 21:36:15.119641"], ["image", "sxsw.jpg"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Rainy St"], ["description", "Renovated houses turned into bungalow bars reign supreme, stroll from bars to food trailers to bars again"], ["created_at", "2020-03-04 21:36:15.124615"], ["updated_at", "2020-03-04 21:36:15.124615"], ["image", "rainy.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Dirty 6"], ["description", "Where Univerity of Texas, Downtown Austin, and chaos meet for a night you won't remember!"], ["created_at", "2020-03-04 21:36:15.128033"], ["updated_at", "2020-03-04 21:36:15.128033"], ["image", "dirty.jpg"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "West 6"], ["description", "A lot like dirty 6, but with more money!"], ["created_at", "2020-03-04 21:36:15.131522"], ["updated_at", "2020-03-04 21:36:15.131522"], ["image", "west.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "East Austin"], ["description", "Bars, restaurants, food trucks, and country music. You could spend an entire day here!"], ["created_at", "2020-03-04 21:36:15.134896"], ["updated_at", "2020-03-04 21:36:15.134896"], ["image", "east.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Lake Travis"], ["description", "Rent a party boat and hit the lake, Guns out, buns out!"], ["created_at", "2020-03-04 21:36:15.150895"], ["updated_at", "2020-03-04 21:36:15.150895"], ["image", "travis.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.8ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Lady Bird Lake"], ["description", "Tons of rental options to hit the river including paddle boarding, duck boats, and kayaking!"], ["created_at", "2020-03-04 21:36:15.155150"], ["updated_at", "2020-03-04 21:36:15.155150"], ["image", "lady.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Float the River"], ["description", "It's almost always float season in Austin, rent a party bus and enjoy a day of floating!"], ["created_at", "2020-03-04 21:36:15.160326"], ["updated_at", "2020-03-04 21:36:15.160326"], ["image", "float.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("title", "description", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Antonio's Super Secret DJ Parties"], ["description", "Join Austin's favorite programmer, Antonio, as you spend a night attending Austin's most secret and exclusive abandoned warehouse parties!"], ["created_at", "2020-03-04 21:36:15.164027"], ["updated_at", "2020-03-04 21:36:15.164027"], ["image", "dj.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "end_date", "event_name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["start_date", "Apr 2 2020"], ["end_date", "Apr 7 2020"], ["event_name", "Avi's Bachelor Party"], ["description", "Yay Avi!"], ["created_at", "2020-03-04 21:36:15.177079"], ["updated_at", "2020-03-04 21:36:15.177079"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "end_date", "event_name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["start_date", "May 8 2020"], ["end_date", "May 11 2020"], ["event_name", "Doug's Bachelor Party"], ["description", "Party on Doug!"], ["created_at", "2020-03-04 21:36:15.181649"], ["updated_at", "2020-03-04 21:36:15.181649"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "end_date", "event_name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["start_date", "Feb 3 2020"], ["end_date", "Feb 18 2020"], ["event_name", "Tom's Bachelor Party"], ["description", "The best way to reassure a friend "], ["created_at", "2020-03-04 21:36:15.185006"], ["updated_at", "2020-03-04 21:36:15.185006"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "end_date", "event_name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["start_date", "Mar 8 2020"], ["end_date", "Mar 11 2020"], ["event_name", "Dan's Bachelor Party"], ["description", "Let's celebrate Dan's third marriage the right way!"], ["created_at", "2020-03-04 21:36:15.190579"], ["updated_at", "2020-03-04 21:36:15.190579"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/users" for ::1 at 2020-03-04 15:39:22 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+=======
 Started GET "/activities" for ::1 at 2020-03-04 14:45:43 -0600
   [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -41804,10 +42193,329 @@ Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 5779
 
 
 Started GET "/users" for ::1 at 2020-03-04 15:45:51 -0600
+>>>>>>> master
 Processing by UsersController#index as HTML
   Rendering users/index.html.erb within layouts/application
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
   ↳ app/views/users/index.html.erb:6
+<<<<<<< HEAD
+  Rendered users/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 6475)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 118)
+Completed 200 OK in 98ms (Views: 86.9ms | ActiveRecord: 1.4ms | Allocations: 21274)
+
+
+Started GET "/users/1" for ::1 at 2020-03-04 15:39:25 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 38.1ms | Allocations: 7807)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 61ms (Views: 45.5ms | ActiveRecord: 1.8ms | Allocations: 15425)
+
+
+Started GET "/users/2" for ::1 at 2020-03-04 15:39:27 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 968)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.3ms | Allocations: 5745)
+
+
+Started GET "/users/4" for ::1 at 2020-03-04 15:39:35 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 968)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.2ms | Allocations: 5746)
+
+
+Started GET "/users/9" for ::1 at 2020-03-04 15:39:40 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 6.2ms | Allocations: 968)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 32ms (Views: 27.7ms | ActiveRecord: 1.0ms | Allocations: 5743)
+
+
+Started GET "/users/10" for ::1 at 2020-03-04 15:39:46 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 8.1ms | Allocations: 967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 37ms (Views: 32.1ms | ActiveRecord: 0.4ms | Allocations: 5723)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:39:54 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1094)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 29ms (Views: 25.3ms | ActiveRecord: 0.7ms | Allocations: 5351)
+
+
+Started GET "/users/11" for ::1 at 2020-03-04 15:39:56 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 0.4ms | Allocations: 5723)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:39:59 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1094)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.1ms | Allocations: 5350)
+
+
+Started GET "/users/2" for ::1 at 2020-03-04 15:40:00 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 970)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 0.5ms | Allocations: 5736)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:40:03 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.5ms | Allocations: 5354)
+
+
+Started GET "/users/1" for ::1 at 2020-03-04 15:40:03 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 0.3ms | Allocations: 5722)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:40:05 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1094)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.4ms | Allocations: 5344)
+
+
+Started GET "/users/2" for ::1 at 2020-03-04 15:40:06 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.4ms | Allocations: 5724)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:40:08 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1094)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.2ms | Allocations: 5352)
+
+
+Started GET "/users/12" for ::1 at 2020-03-04 15:40:12 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 7.9ms | Allocations: 967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 74ms (Views: 70.3ms | ActiveRecord: 0.7ms | Allocations: 5722)
+
+
+Started GET "/users/12" for ::1 at 2020-03-04 15:40:24 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 35ms (Views: 27.3ms | ActiveRecord: 0.3ms | Allocations: 5724)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:40:33 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 6)
+Completed 200 OK in 67ms (Views: 65.4ms | ActiveRecord: 0.2ms | Allocations: 5346)
+
+
+Started GET "/users/10" for ::1 at 2020-03-04 15:40:34 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 5.9ms | Allocations: 967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 85ms (Views: 82.4ms | ActiveRecord: 0.3ms | Allocations: 5728)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:40:35 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.2ms | Allocations: 5350)
+
+
+Started GET "/users/11" for ::1 at 2020-03-04 15:40:37 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (4.9ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 8.9ms | Allocations: 970)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 33ms (Views: 25.4ms | ActiveRecord: 5.1ms | Allocations: 5733)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:40:41 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.1ms | Allocations: 5348)
+
+
+Started GET "/users/12" for ::1 at 2020-03-04 15:40:45 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 8.5ms | Allocations: 967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 0.4ms | Allocations: 5727)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:40:46 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.1ms | Allocations: 5347)
+
+
+Started GET "/users/10" for ::1 at 2020-03-04 15:40:47 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 12.2ms | Allocations: 967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 34ms (Views: 30.0ms | ActiveRecord: 0.8ms | Allocations: 5725)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:40:48 -0600
+=======
   Rendered users/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1682)
 [Webpacker] Everything's up-to-date. Nothing to do
   Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
@@ -42193,10 +42901,184 @@ Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.1ms | Allocations: 548
 
 
 Started GET "/users" for ::1 at 2020-03-04 15:54:50 -0600
+>>>>>>> master
 Processing by UsersController#index as HTML
   Rendering users/index.html.erb within layouts/application
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
   ↳ app/views/users/index.html.erb:6
+<<<<<<< HEAD
+  Rendered users/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.3ms | Allocations: 5346)
+
+
+Started GET "/users/9" for ::1 at 2020-03-04 15:40:49 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 0.4ms | Allocations: 5724)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:40:50 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.1ms | Allocations: 5347)
+
+
+Started GET "/users/8" for ::1 at 2020-03-04 15:40:52 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 57ms (Views: 54.7ms | ActiveRecord: 0.3ms | Allocations: 5733)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:40:54 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.2ms | Allocations: 5354)
+
+
+Started GET "/users/7" for ::1 at 2020-03-04 15:41:03 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 970)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 0.3ms | Allocations: 5734)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:41:06 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.7ms | Allocations: 5344)
+
+
+Started GET "/users/6" for ::1 at 2020-03-04 15:41:07 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 0.4ms | Allocations: 5726)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:41:09 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.5ms | Allocations: 5342)
+
+
+Started GET "/users/5" for ::1 at 2020-03-04 15:41:10 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.6ms | Allocations: 5726)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:41:13 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.5ms | Allocations: 5348)
+
+
+Started GET "/users/5" for ::1 at 2020-03-04 15:41:18 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 0.4ms | Allocations: 5723)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:41:19 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.3ms | Allocations: 5341)
+
+
+Started GET "/users/6" for ::1 at 2020-03-04 15:41:20 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 54ms (Views: 50.9ms | ActiveRecord: 0.4ms | Allocations: 5729)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:41:21 -0600
+=======
   Rendered users/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1497)
 [Webpacker] Everything's up-to-date. Nothing to do
   Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
@@ -42354,10 +43236,59 @@ Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.2ms | Allocations: 657
 
 
 Started GET "/users" for ::1 at 2020-03-04 15:56:36 -0600
+>>>>>>> master
 Processing by UsersController#index as HTML
   Rendering users/index.html.erb within layouts/application
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
   ↳ app/views/users/index.html.erb:6
+<<<<<<< HEAD
+  Rendered users/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.3ms | Allocations: 5352)
+
+
+Started GET "/users/3" for ::1 at 2020-03-04 15:41:22 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 970)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.2ms | Allocations: 5728)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:41:24 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.4ms | Allocations: 5345)
+
+
+Started GET "/users/2" for ::1 at 2020-03-04 15:41:25 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 0.3ms | Allocations: 5726)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:41:26 -0600
+=======
   Rendered users/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1497)
 [Webpacker] Everything's up-to-date. Nothing to do
   Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
@@ -42460,10 +43391,396 @@ Completed 200 OK in 100ms (Views: 96.6ms | ActiveRecord: 2.1ms | Allocations: 29
 
 
 Started GET "/users" for ::1 at 2020-03-04 15:58:08 -0600
+>>>>>>> master
 Processing by UsersController#index as HTML
   Rendering users/index.html.erb within layouts/application
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
   ↳ app/views/users/index.html.erb:6
+<<<<<<< HEAD
+  Rendered users/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.2ms | Allocations: 5346)
+
+
+Started GET "/users/9" for ::1 at 2020-03-04 15:41:27 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (3.5ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 7.1ms | Allocations: 967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 34ms (Views: 26.4ms | ActiveRecord: 3.6ms | Allocations: 5726)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:41:29 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.2ms | Allocations: 5350)
+
+
+Started GET "/users/10" for ::1 at 2020-03-04 15:41:30 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (2.0ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 5.4ms | Allocations: 967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 32ms (Views: 22.6ms | ActiveRecord: 3.5ms | Allocations: 5726)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:41:31 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.1ms | Allocations: 5358)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:47:50 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1113)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.2ms | Allocations: 5367)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:48:41 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1355)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 110)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.1ms | Allocations: 6856)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:48:48 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1352)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 110)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.1ms | Allocations: 6858)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:49:24 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1346)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 110)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.2ms | Allocations: 6843)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:50:18 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1348)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 110)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.1ms | Allocations: 6841)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:50:33 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1351)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 110)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.4ms | Allocations: 6853)
+
+
+Started GET "/users/3" for ::1 at 2020-03-04 15:50:39 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1225)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 35ms (Views: 31.5ms | ActiveRecord: 0.9ms | Allocations: 6139)
+
+
+Started GET "/users/2" for ::1 at 2020-03-04 15:50:44 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.2ms | Allocations: 5724)
+
+
+Started GET "/users/1" for ::1 at 2020-03-04 15:50:51 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 24ms (Views: 20.7ms | ActiveRecord: 0.3ms | Allocations: 5725)
+
+
+Started GET "/events" for ::1 at 2020-03-04 15:51:11 -0600
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:7
+  Rendered events/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 4931)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 25ms (Views: 22.1ms | ActiveRecord: 0.2ms | Allocations: 9723)
+
+
+Started GET "/" for ::1 at 2020-03-04 15:52:06 -0600
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 714)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 110)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.0ms | Allocations: 6075)
+
+
+Started GET "/users" for ::1 at 2020-03-04 15:52:27 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1351)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 50ms (Views: 27.7ms | ActiveRecord: 0.3ms | Allocations: 6187)
+
+
+Started GET "/events" for ::1 at 2020-03-04 15:52:30 -0600
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:6
+  Rendered events/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 953)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 0.2ms | Allocations: 5785)
+
+
+Started GET "/activities" for ::1 at 2020-03-04 15:52:34 -0600
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/activities/index.html.erb:7
+  Rendered activities/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 5160)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 35ms (Views: 25.9ms | ActiveRecord: 2.2ms | Allocations: 11144)
+
+
+Started GET "/events" for ::1 at 2020-03-04 16:00:17 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:6
+  Rendered events/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 973)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 2.8ms | Allocations: 110)
+Completed 200 OK in 61ms (Views: 57.4ms | ActiveRecord: 0.2ms | Allocations: 6473)
+
+
+Started GET "/activities" for ::1 at 2020-03-04 16:00:19 -0600
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/activities/index.html.erb:7
+  Rendered activities/index.html.erb within layouts/application (Duration: 20.2ms | Allocations: 4565)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.2ms | Allocations: 5683)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+     6: <br>
+     7: <% @activities.each do |activity| %>
+     8: <br>
+     9: <%= image_tag("#{@activity.image}") %><br>
+    10: <strong> * <%= link_to activity.title, activity_path(activity) %> * </strong>
+    11: 
+    12: <%= activity.description %> 
+  
+app/views/activities/index.html.erb:9
+app/views/activities/index.html.erb:7
+Started GET "/activities" for ::1 at 2020-03-04 16:00:31 -0600
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/activities/index.html.erb:7
+  Rendered activities/index.html.erb within layouts/application (Duration: 32.6ms | Allocations: 7052)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 110)
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.2ms | Allocations: 12451)
+
+
+Started GET "/activities" for ::1 at 2020-03-04 16:01:34 -0600
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/activities/index.html.erb:7
+  Rendered activities/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 6814)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 110)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.2ms | Allocations: 12212)
+
+
+Started GET "/activities" for ::1 at 2020-03-04 16:01:59 -0600
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/activities/index.html.erb:7
+  Rendered activities/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 6741)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 110)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.2ms | Allocations: 12135)
+
+
+Started GET "/activities/6" for ::1 at 2020-03-04 16:02:06 -0600
+Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:26:in `show'
+  Rendering activities/show.html.erb within layouts/application
+  Rendered activities/show.html.erb within layouts/application (Duration: 5.3ms | Allocations: 835)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.2ms | Allocations: 5746)
+
+
+Started GET "/activities" for ::1 at 2020-03-04 16:02:15 -0600
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/activities/index.html.erb:7
+  Rendered activities/index.html.erb within layouts/application (Duration: 23.5ms | Allocations: 6567)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.1ms | Allocations: 10725)
+
+
+Started GET "/activities/1" for ::1 at 2020-03-04 16:02:16 -0600
+Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:26:in `show'
+  Rendering activities/show.html.erb within layouts/application
+  Rendered activities/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 665)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 21ms (Views: 17.0ms | ActiveRecord: 0.1ms | Allocations: 5312)
+
+
+Started GET "/activities" for ::1 at 2020-03-04 16:02:18 -0600
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/activities/index.html.erb:7
+  Rendered activities/index.html.erb within layouts/application (Duration: 16.8ms | Allocations: 6565)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 38ms (Views: 37.6ms | ActiveRecord: 0.2ms | Allocations: 10716)
+
+
+Started GET "/" for ::1 at 2020-03-04 16:05:10 -0600
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (Duration: 42.7ms | Allocations: 1641)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 83ms (Views: 74.4ms | ActiveRecord: 0.0ms | Allocations: 6363)
+
+
+Started GET "/activities" for ::1 at 2020-03-04 16:05:12 -0600
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/activities/index.html.erb:7
+  Rendered activities/index.html.erb within layouts/application (Duration: 41.1ms | Allocations: 7435)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 0.4ms | Allocations: 11511)
+
+
+Started GET "/activities/8" for ::1 at 2020-03-04 16:05:16 -0600
+Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:26:in `show'
+  Rendering activities/show.html.erb within layouts/application
+  Rendered activities/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 669)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 62ms (Views: 58.7ms | ActiveRecord: 0.3ms | Allocations: 5328)
+
+
+Started GET "/activities/8" for ::1 at 2020-03-04 16:05:22 -0600
+Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:26:in `show'
+  Rendering activities/show.html.erb within layouts/application
+  Rendered activities/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 668)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.2ms | Allocations: 5320)
+
+
+Started GET "/activities" for ::1 at 2020-03-04 16:06:46 -0600
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/activities/index.html.erb:7
+  Rendered activities/index.html.erb within layouts/application (Duration: 20.6ms | Allocations: 6771)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 110)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.2ms | Allocations: 12171)
+=======
   Rendered users/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1682)
 [Webpacker] Everything's up-to-date. Nothing to do
   Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
@@ -42860,5 +44177,703 @@ Processing by UsersController#index as HTML
 [Webpacker] Everything's up-to-date. Nothing to do
   Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 110)
 Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.2ms | Allocations: 7659)
+>>>>>>> master
+
+
+Started GET "/" for ::1 at 2020-03-04 16:14:40 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (Duration: 93.6ms | Allocations: 20252)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 113)
+Completed 200 OK in 113ms (Views: 107.5ms | ActiveRecord: 0.0ms | Allocations: 26959)
+
+
+Started GET "/users" for ::1 at 2020-03-04 16:14:48 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:8
+  Rendered users/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 6084)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 20ms (Views: 12.3ms | ActiveRecord: 1.0ms | Allocations: 12396)
+
+
+Started GET "/" for ::1 at 2020-03-04 16:14:49 -0600
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 601)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 4676)
+
+
+Started GET "/users" for ::1 at 2020-03-04 16:14:51 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:8
+  Rendered users/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1769)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.2ms | Allocations: 5857)
+
+
+Started GET "/users/2" for ::1 at 2020-03-04 16:14:55 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 31.4ms | Allocations: 7801)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 56ms (Views: 37.2ms | ActiveRecord: 2.7ms | Allocations: 15346)
+
+
+Started GET "/users/2/edit" for ::1 at 2020-03-04 16:14:58 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 961.2ms | Allocations: 782431)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 971ms (Views: 967.2ms | ActiveRecord: 0.2ms | Allocations: 787252)
+
+
+Started GET "/users/2/edit" for ::1 at 2020-03-04 16:15:16 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 903)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 110)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.1ms | Allocations: 6845)
+
+
+Started GET "/users" for ::1 at 2020-03-04 16:15:20 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:8
+  Rendered users/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1987)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.2ms | Allocations: 6206)
+
+
+Started GET "/users/1" for ::1 at 2020-03-04 16:15:21 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1205)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.3ms | Allocations: 6037)
+
+
+Started GET "/users" for ::1 at 2020-03-04 16:15:23 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:8
+  Rendered users/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1760)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.3ms | Allocations: 5831)
+
+
+Started GET "/users/new" for ::1 at 2020-03-04 16:15:27 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/users/new.html.erb:17
+  Rendered users/new.html.erb within layouts/application (Duration: 16.5ms | Allocations: 6584)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.7ms | Allocations: 10920)
+
+
+Started GET "/users/new" for ::1 at 2020-03-04 16:15:35 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/users/new.html.erb:16
+  Rendered users/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2144)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 110)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.1ms | Allocations: 7585)
+
+
+Started GET "/events" for ::1 at 2020-03-04 16:15:38 -0600
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:8
+  Rendered events/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1604)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.1ms | Allocations: 6222)
+
+
+Started GET "/events/1" for ::1 at 2020-03-04 16:15:40 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:42:in `show'
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1911)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms | Allocations: 4301)
+
+
+  
+SyntaxError (/Users/jessica/Desktop/Basic_Bach/app/models/event_activity.rb:2: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/Users/jessica/Desktop/Basic_Bach/app/models/event_activity.rb:5: syntax error, unexpected ===, expecting end
+=======
+^~~
+/Users/jessica/Desktop/Basic_Bach/app/models/event_activity.rb:8: syntax error, unexpected >>, expecting end
+>>>>>>> 26919e5d1e053f8eb09fb93...
+^~):
+  
+app/models/event_activity.rb:2: syntax error, unexpected <<
+app/models/event_activity.rb:5: syntax error, unexpected ===, expecting end
+app/models/event_activity.rb:8: syntax error, unexpected >>, expecting end
+app/models/event_activity.rb:2: syntax error, unexpected <<
+app/models/event_activity.rb:5: syntax error, unexpected ===, expecting end
+app/models/event_activity.rb:8: syntax error, unexpected >>, expecting end
+app/models/event_activity.rb:2: syntax error, unexpected <<
+app/models/event_activity.rb:5: syntax error, unexpected ===, expecting end
+app/models/event_activity.rb:8: syntax error, unexpected >>, expecting end
+app/views/events/show.html.erb:9
+Started GET "/events/1" for ::1 at 2020-03-04 16:15:54 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:42:in `show'
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (Duration: 8.5ms | Allocations: 3967)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms | Allocations: 5657)
+
+
+  
+SyntaxError (/Users/jessica/Desktop/Basic_Bach/app/models/event_activity.rb:2: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/Users/jessica/Desktop/Basic_Bach/app/models/event_activity.rb:5: syntax error, unexpected ===, expecting end
+=======
+^~~
+/Users/jessica/Desktop/Basic_Bach/app/models/event_activity.rb:8: syntax error, unexpected >>, expecting end
+>>>>>>> 26919e5d1e053f8eb09fb93...
+^~):
+  
+app/models/event_activity.rb:2: syntax error, unexpected <<
+app/models/event_activity.rb:5: syntax error, unexpected ===, expecting end
+app/models/event_activity.rb:8: syntax error, unexpected >>, expecting end
+app/models/event_activity.rb:2: syntax error, unexpected <<
+app/models/event_activity.rb:5: syntax error, unexpected ===, expecting end
+app/models/event_activity.rb:8: syntax error, unexpected >>, expecting end
+app/models/event_activity.rb:2: syntax error, unexpected <<
+app/models/event_activity.rb:5: syntax error, unexpected ===, expecting end
+app/models/event_activity.rb:8: syntax error, unexpected >>, expecting end
+app/views/events/show.html.erb:9
+Started GET "/events" for ::1 at 2020-03-04 16:16:12 -0600
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:8
+  Rendered events/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1592)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 115)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.1ms | Allocations: 6322)
+
+
+Started GET "/events/1" for ::1 at 2020-03-04 16:16:14 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:42:in `show'
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1560)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 2502)
+
+
+  
+SyntaxError (/Users/jessica/Desktop/Basic_Bach/app/models/event_activity.rb:2: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/Users/jessica/Desktop/Basic_Bach/app/models/event_activity.rb:5: syntax error, unexpected ===, expecting end
+=======
+^~~
+/Users/jessica/Desktop/Basic_Bach/app/models/event_activity.rb:8: syntax error, unexpected >>, expecting end
+>>>>>>> 26919e5d1e053f8eb09fb93...
+^~):
+  
+app/models/event_activity.rb:2: syntax error, unexpected <<
+app/models/event_activity.rb:5: syntax error, unexpected ===, expecting end
+app/models/event_activity.rb:8: syntax error, unexpected >>, expecting end
+app/models/event_activity.rb:2: syntax error, unexpected <<
+app/models/event_activity.rb:5: syntax error, unexpected ===, expecting end
+app/models/event_activity.rb:8: syntax error, unexpected >>, expecting end
+app/models/event_activity.rb:2: syntax error, unexpected <<
+app/models/event_activity.rb:5: syntax error, unexpected ===, expecting end
+app/models/event_activity.rb:8: syntax error, unexpected >>, expecting end
+app/views/events/show.html.erb:9
+Started GET "/events/1" for ::1 at 2020-03-04 16:17:47 -0600
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:42:in `show'
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" INNER JOIN "event_activities" ON "activities"."id" = "event_activities"."activity_id" WHERE "event_activities"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/views/events/show.html.erb:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_events" ON "users"."id" = "user_events"."user_id" WHERE "user_events"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/views/events/show.html.erb:18
+  Rendered events/show.html.erb within layouts/application (Duration: 13.5ms | Allocations: 10353)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 39ms (Views: 23.3ms | ActiveRecord: 3.0ms | Allocations: 23193)
+
+
+Started GET "/events" for ::1 at 2020-03-04 16:17:52 -0600
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:8
+  Rendered events/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1402)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.4ms | Allocations: 5476)
+
+
+Started GET "/activities" for ::1 at 2020-03-04 16:17:53 -0600
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/activities/index.html.erb:10
+  Rendered activities/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 10696)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 32ms (Views: 28.5ms | ActiveRecord: 0.6ms | Allocations: 15310)
+
+
+Started GET "/users" for ::1 at 2020-03-04 16:17:54 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:8
+  Rendered users/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 5212)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 2.0ms | Allocations: 9827)
+
+
+Started GET "/users/10" for ::1 at 2020-03-04 16:17:57 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2599)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 0.8ms | Allocations: 7445)
+
+
+Started GET "/events" for ::1 at 2020-03-04 16:17:59 -0600
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:8
+  Rendered events/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1406)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.7ms | Allocations: 5480)
+
+
+Started GET "/events" for ::1 at 2020-03-04 16:18:07 -0600
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:8
+  Rendered events/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1381)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.1ms | Allocations: 5462)
+
+
+Started GET "/activities" for ::1 at 2020-03-04 16:18:09 -0600
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/activities/index.html.erb:10
+  Rendered activities/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 7224)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.2ms | Allocations: 11305)
+
+
+Started GET "/events" for ::1 at 2020-03-04 16:18:09 -0600
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:8
+  Rendered events/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1381)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 5451)
+
+
+Started GET "/events/1" for ::1 at 2020-03-04 16:18:11 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:42:in `show'
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" INNER JOIN "event_activities" ON "activities"."id" = "event_activities"."activity_id" WHERE "event_activities"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/views/events/show.html.erb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_events" ON "users"."id" = "user_events"."user_id" WHERE "user_events"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/views/events/show.html.erb:18
+  Rendered events/show.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1873)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 18ms (Views: 13.5ms | ActiveRecord: 1.4ms | Allocations: 6580)
+
+
+Started GET "/events" for ::1 at 2020-03-04 16:18:18 -0600
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:8
+  Rendered events/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1381)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.2ms | Allocations: 5455)
+
+
+Started GET "/events/2" for ::1 at 2020-03-04 16:18:20 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:42:in `show'
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities" INNER JOIN "event_activities" ON "activities"."id" = "event_activities"."activity_id" WHERE "event_activities"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/views/events/show.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_events" ON "users"."id" = "user_events"."user_id" WHERE "user_events"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/views/events/show.html.erb:18
+  Rendered events/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1837)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.3ms | Allocations: 6532)
+
+
+Started GET "/events" for ::1 at 2020-03-04 16:18:21 -0600
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:8
+  Rendered events/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1381)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.2ms | Allocations: 5451)
+
+
+Started GET "/events/3" for ::1 at 2020-03-04 16:18:22 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:42:in `show'
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities" INNER JOIN "event_activities" ON "activities"."id" = "event_activities"."activity_id" WHERE "event_activities"."event_id" = ?[0m  [["event_id", 3]]
+  ↳ app/views/events/show.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_events" ON "users"."id" = "user_events"."user_id" WHERE "user_events"."event_id" = ?[0m  [["event_id", 3]]
+  ↳ app/views/events/show.html.erb:18
+  Rendered events/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1838)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.5ms | Allocations: 6524)
+
+
+Started GET "/events" for ::1 at 2020-03-04 16:18:29 -0600
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:8
+  Rendered events/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1381)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.2ms | Allocations: 5455)
+
+
+Started GET "/events/4" for ::1 at 2020-03-04 16:18:31 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:42:in `show'
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities" INNER JOIN "event_activities" ON "activities"."id" = "event_activities"."activity_id" WHERE "event_activities"."event_id" = ?[0m  [["event_id", 4]]
+  ↳ app/views/events/show.html.erb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_events" ON "users"."id" = "user_events"."user_id" WHERE "user_events"."event_id" = ?[0m  [["event_id", 4]]
+  ↳ app/views/events/show.html.erb:18
+  Rendered events/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1838)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.5ms | Allocations: 6527)
+
+
+Started GET "/events" for ::1 at 2020-03-04 16:18:33 -0600
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:8
+  Rendered events/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1381)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.2ms | Allocations: 5454)
+
+
+Started GET "/events/new" for ::1 at 2020-03-04 16:18:36 -0600
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/events/new.html.erb:24
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/events/new.html.erb:27
+  Rendered events/new.html.erb within layouts/application (Duration: 42.0ms | Allocations: 7350)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 49ms (Views: 47.1ms | ActiveRecord: 0.3ms | Allocations: 11591)
+
+
+Started GET "/activities" for ::1 at 2020-03-04 16:18:38 -0600
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/activities/index.html.erb:10
+  Rendered activities/index.html.erb within layouts/application (Duration: 19.2ms | Allocations: 7207)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.2ms | Allocations: 11285)
+
+
+Started GET "/analytics" for ::1 at 2020-03-04 16:18:40 -0600
+Processing by StaticController#analytics as HTML
+  Rendering static/analytics.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/static/analytics.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "user_events" ON "users"."id" = "user_events"."user_id" WHERE "user_events"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/views/static/analytics.html.erb:16
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "user_events" ON "users"."id" = "user_events"."user_id" WHERE "user_events"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/views/static/analytics.html.erb:16
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "user_events" ON "users"."id" = "user_events"."user_id" WHERE "user_events"."event_id" = ?[0m  [["event_id", 3]]
+  ↳ app/views/static/analytics.html.erb:16
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "user_events" ON "users"."id" = "user_events"."user_id" WHERE "user_events"."event_id" = ?[0m  [["event_id", 4]]
+  ↳ app/views/static/analytics.html.erb:16
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/static/analytics.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "events"[0m
+  ↳ app/views/static/analytics.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities"[0m
+  ↳ app/views/static/analytics.html.erb:36
+  [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/static/analytics.html.erb:41
+  Rendered static/analytics.html.erb within layouts/application (Duration: 17.8ms | Allocations: 7568)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 1.2ms | Allocations: 12142)
+
+
+Started GET "/activities" for ::1 at 2020-03-04 16:18:43 -0600
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/activities/index.html.erb:10
+  Rendered activities/index.html.erb within layouts/application (Duration: 16.3ms | Allocations: 7207)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.4ms | Allocations: 11286)
+
+
+Started GET "/activities/1" for ::1 at 2020-03-04 16:18:44 -0600
+Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:26:in `show'
+  Rendering activities/show.html.erb within layouts/application
+  Rendered activities/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 854)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.2ms | Allocations: 5670)
+
+
+Started GET "/activities/new" for ::1 at 2020-03-04 16:18:45 -0600
+Processing by ActivitiesController#new as HTML
+  Rendering activities/new.html.erb within layouts/application
+  Rendered activities/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1050)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 5381)
+
+
+Started GET "/activities/1/edit" for ::1 at 2020-03-04 16:18:47 -0600
+Processing by ActivitiesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:17:in `edit'
+  Rendering activities/edit.html.erb within layouts/application
+  Rendered activities/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1091)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 0.1ms | Allocations: 5919)
+
+
+Started GET "/activities" for ::1 at 2020-03-04 16:18:52 -0600
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/activities/index.html.erb:10
+  Rendered activities/index.html.erb within layouts/application (Duration: 18.6ms | Allocations: 7202)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.2ms | Allocations: 11280)
+
+
+Started GET "/activities/1" for ::1 at 2020-03-04 16:18:55 -0600
+Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:26:in `show'
+  Rendering activities/show.html.erb within layouts/application
+  Rendered activities/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 685)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.1ms | Allocations: 5259)
+
+
+Started GET "/activities/1" for ::1 at 2020-03-04 16:19:17 -0600
+Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:26:in `show'
+  Rendering activities/show.html.erb within layouts/application
+  Rendered activities/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 806)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 110)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.1ms | Allocations: 6629)
+
+
+Started GET "/analytics" for ::1 at 2020-03-04 16:19:20 -0600
+Processing by StaticController#analytics as HTML
+  Rendering static/analytics.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/static/analytics.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "user_events" ON "users"."id" = "user_events"."user_id" WHERE "user_events"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/views/static/analytics.html.erb:16
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "user_events" ON "users"."id" = "user_events"."user_id" WHERE "user_events"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/views/static/analytics.html.erb:16
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "user_events" ON "users"."id" = "user_events"."user_id" WHERE "user_events"."event_id" = ?[0m  [["event_id", 3]]
+  ↳ app/views/static/analytics.html.erb:16
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "user_events" ON "users"."id" = "user_events"."user_id" WHERE "user_events"."event_id" = ?[0m  [["event_id", 4]]
+  ↳ app/views/static/analytics.html.erb:16
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/static/analytics.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "events"[0m
+  ↳ app/views/static/analytics.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities"[0m
+  ↳ app/views/static/analytics.html.erb:36
+  [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/static/analytics.html.erb:41
+  Rendered static/analytics.html.erb within layouts/application (Duration: 15.9ms | Allocations: 7517)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 1.8ms | Allocations: 12120)
+
+
+Started GET "/activities" for ::1 at 2020-03-04 16:19:21 -0600
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/activities/index.html.erb:10
+  Rendered activities/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 7401)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.1ms | Allocations: 11622)
+
+
+Started GET "/activities/4" for ::1 at 2020-03-04 16:19:22 -0600
+Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:26:in `show'
+  Rendering activities/show.html.erb within layouts/application
+  Rendered activities/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 663)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 5239)
+
+
+Started GET "/activities/4/edit" for ::1 at 2020-03-04 16:19:23 -0600
+Processing by ActivitiesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:17:in `edit'
+  Rendering activities/edit.html.erb within layouts/application
+  Rendered activities/edit.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1072)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.1ms | Allocations: 5897)
+
+
+Started GET "/activities/4/edit" for ::1 at 2020-03-04 16:19:32 -0600
+Processing by ActivitiesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:17:in `edit'
+  Rendering activities/edit.html.erb within layouts/application
+  Rendered activities/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1078)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 110)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.1ms | Allocations: 7020)
+
+
+Started GET "/events" for ::1 at 2020-03-04 16:20:02 -0600
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:8
+  Rendered events/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1592)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.1ms | Allocations: 6244)
+
+
+Started GET "/events/new" for ::1 at 2020-03-04 16:20:04 -0600
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/events/new.html.erb:24
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/events/new.html.erb:27
+  Rendered events/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 4407)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.3ms | Allocations: 8742)
 
 

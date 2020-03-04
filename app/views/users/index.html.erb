@@ -7,7 +7,7 @@
 <br>
 <% @users.each do |user| %>
 <br>
-<strong> * <%= link_to user.name, user_path(user) %></strong>
+<img style="width: 50px" src="<%=user.image%>"><strong> * <%= link_to user.name, user_path(user) %></strong>
  * <%= user.role %>
  <br>
 
