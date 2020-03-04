@@ -3,6 +3,8 @@
 <h1>EVENTS </h1>
 <h4>Save the date!</h4>
 <br>
+<%= image_tag("event.jpeg", :size => '600x300', :align=> "center")%>
+<br>
 <% @events.each do |event| %>
 <br>
 <strong> * <%= link_to event.event_name, event_path(event) %></strong>

@@ -3,6 +3,8 @@
 <h1>USERS</h1>
 <h4>The who's who</h4>
 <br>
+<%= image_tag("people.jpeg", :size => '600x300', :align=> "center")%>
+<br>
 <% @users.each do |user| %>
 <br>
 <img style="width: 50px" src="<%=user.image%>"><strong> * <%= link_to user.name, user_path(user) %></strong>
