@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h1> ' </h1>
   <br>
 <h1>USERS</h1>
@@ -6,7 +5,7 @@
 <br>
 <% @users.each do |user| %>
 <br>
-<strong> * <%= link_to user.name, user_path(user) %></strong>
+<img style="width: 50px" src="<%=user.image%>"><strong> * <%= link_to user.name, user_path(user) %></strong>
  * <%= user.role %>
  <br>
 
@@ -18,9 +17,3 @@
 
 | <%= link_to "Add New User", new_user_path %> | 
 
-=======
-r<h1>User Index</h1>
-<%= @user.each do |user| %>
-<%= link_to user.name, user_path(user) %>
-<%end%>
->>>>>>> 26919e5d1e053f8eb09fb93b333ba5f5066724bb

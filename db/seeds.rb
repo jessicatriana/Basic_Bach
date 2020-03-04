@@ -7,22 +7,32 @@ require 'date'
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.create(name: "Hilda Bumbletuna", role: "Host", image:"https://images.unsplash.com/photo-1566147752388-941d9c4e224f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")
+User.create(name: "Neddie Spaghettie" , role: "Host", image:"https://images.unsplash.com/photo-1578436956257-b0307ac46a3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")
 
-<<<<<<< HEAD
-=======
-d = Date.parse('3rd Feb 2001')
 
-avi = User.create(name: "Avi", role: "Host")
-tom = User.create(name: "Tom", role: "Host")
-dan = User.create(name: "Dan", role: "Guest")
->>>>>>> 26919e5d1e053f8eb09fb93b333ba5f5066724bb
+User.create(name: "Ronda Skoopinhymer", role: "Guest", image:"https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80")
+User.create(name: "Lia Peeples", role: "Guest", image:"https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" )
+User.create(name: "Wilda Beauregard", role: "Guest", image:"https://images.unsplash.com/photo-1534945773093-1119ae5684ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" )
+User.create(name: "Tillie McNillie", role: "Guest", image:"https://images.unsplash.com/photo-1530577197743-7adf14294584?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")
+User.create(name: "Jillbo Noopers", role: "Guest", image:"https://images.unsplash.com/photo-1520179525699-c88200fde0cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")
 
-20.times do
-    User.create(name: Faker::Name.name, role: "Guest")
-end
+User.create(name: "Sleepy Gary", role: "Guest", image:"https://images.unsplash.com/photo-1506919258185-6078bba55d2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" )
+User.create(name: "Nathanial Lomax", role: "Guest", image:"https://images.unsplash.com/photo-1561683193-d56e5c701ab4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")
+User.create(name: "Wyatt WhiteClaw", role: "Guest", image:"https://images.unsplash.com/photo-1562045726-c54c4d58b602?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" )
+User.create(name: "Lil Big Steve", role: "Guest", image:"https://images.unsplash.com/photo-1578149685904-d68341b6d403?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")
+User.create(name: "Filiberto Hudgins", role: "Guest", image:"https://images.unsplash.com/photo-1508954528226-0b941060b8bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")
 
-avi = User.create(name: "Avi Smith", role: "Host")
-tom = User.create(name: "Tom Weaver", role: "Host")
+
+# 5.times do
+#     User.create(name: Faker::Name.male_first_name + " " + Faker::Name.last_name, role: "Guest", )
+# end
+
+# 5.times do
+#     User.create(name: Faker::Name.female_first_name + " " + Faker::Name.last_name, role: "Guest")
+# end
+
+
 
 
 hike = Activity.create(title: "Greenbelt Hike", description: "Explore the trails along Austin's greenbelt.", image:"greenbelt.jpg")
