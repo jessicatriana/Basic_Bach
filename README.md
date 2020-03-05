@@ -1,24 +1,27 @@
-# README TESSTTTTtt
+Basic Bach
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Basic Bach is a basic app that allows a user to create a Bachelor/Bachelorette event, add their friends, and assign activities to the event. 
 
-* Ruby version
+Install Instructions (for OS X)
 
-* System dependencies
+- In the Terminal, navigate to the “Basic_Bach” directory
+- Run “bundle install”
+- Run “rails db:seed”
 
-* Configuration
 
-* Database creation
+Usage
 
-* Database initialization
+- View, add, edit, and delete a user
+- View, add, edit, and delete an event
+- View, add, edit, and delete an activity
+- Assign users and activities to a specific event
+- View app analytics
 
-* How to run the test suite
+Contributor’s Guide
 
-* Services (job queues, cache servers, search engines, etc.)
+Pull requests are welcome. For major changes, please contact Jessica Triana (jessica.triana.tx@gmail.com) and Doug Harrison (dharrisong@gmail.com).
 
-* Deployment instructions
+License
 
-* ...
+MIT LICENSE
