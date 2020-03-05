@@ -1,15 +1,13 @@
 <h1> ' </h1>
-  <br>
+<br>
 <h1>Edit User</h1>
 <br>
-<%= form_for @user do |f| %>
-<%= f.label :name, "Full Name" %>
-<%= f.text_field :name %>
-<br>
-<br>
-<%= f.label :role %>
-<%= f.select :role, options_for_select(["Host", "Guest"]) %>
-<br>
+  <%= form_for @user do |f| %>
+  <%= f.label :name, "Full Name" %>
+  <%= f.text_field :name %>
 <br><br>
-<%= f.submit %>
+  <%= f.label :role %>
+  <%= f.select :role, options_for_select(["Host", "Guest"]) %>
+<br><br><br>
+  <%= f.submit %>
 <% end %>

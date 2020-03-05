@@ -18,8 +18,7 @@
 <br>
 <%= f.label :end_date %>
 <%= f.text_field :end_date %>
-<br>
-<br>
+<br><br>
 <%= f.label :users %>
 <%= f.collection_select :user_ids, User.all, :id, :name, prompt: true %>
 <br><br>
