@@ -7,3 +7,10 @@
 |  
 
 <%= link_to "Edit This Activity", edit_activity_path %> |
+<br>
+<br>
+<% if @activity.you_party_brah? %>
+<audio autoplay>
+  <source src="../../assets/sandstormMIDI.mp3" type="audio/mpeg">
+</audio>
+<%end%>
