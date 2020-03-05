@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 <h1> ' </h1>
-  <br>
+<br>
 <img style="width: 400px" src="<%=@user.image%>">
 <h1><%= @user.name %></h1>
 Role: <%= @user.role %>
@@ -8,14 +8,11 @@ Role: <%= @user.role %>
 Attending: 
 <ul>
 <% @user.events.each do |event|  %>
-
 <li>
 <%= event.event_name %>
 <% end %>
-
 </li>
 </ul>
 <br><br>
 | <%= link_to 'Edit User', edit_user_path %> |
-
 <%= link_to "Delete User", @user, :method => :delete %> | 

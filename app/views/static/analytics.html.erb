@@ -5,44 +5,40 @@
 <br>
 
 <%= image_tag("math.gif", :size => '600x300', :align=> "center")%>
- <% @events = Event.all %>
-<div id='RSVPs'> <span><h6><strong>* RSVP's *</strong></h6>
-
-     <% @events.each do |event| %> 
-     
- 
-          
-              <%=  event.event_name %> :
-            <%=  event.users.count %> 
-  
-           <br>
-        <%  end %> 
-<br>
-</span>
-
-</div>
-<h6><strong>* Basic Bach App Data *</strong></h6>
- <strong> Total Users :</strong>
-<% @users = User.all %>
-<%= @users.count %>
-<br>
-
- <strong> Total Events :</strong>
 <% @events = Event.all %>
-<%= @events.count %>
+
+<h6><strong>* RSVP's *</strong></h6>
+    <% @events.each do |event| %> 
+      <%=  event.event_name %> :
+      <%=  event.users.count %> 
 <br>
- <strong> Total Activities :</strong>
-<% @activities = Activity.all %>
-<%= @activities.count %>
+      <%  end %> 
+<br>
+
+<h6><strong>* Basic Bach App Data *</strong></h6>
+
+<strong> Total Users :</strong>
+      <% @users = User.all %>
+      <%= @users.count %>
+<br>
+
+<strong> Total Events :</strong>
+      <% @events = Event.all %>
+      <%= @events.count %>
+<br>
+
+<strong> Total Activities :</strong>
+      <% @activities = Activity.all %>
+      <%= @activities.count %>
 <br><br>
 
 <h6><strong>* Calendar of Events *</strong></h6>
-<% @events = Event.all %>
-<% @events.each do |event| %>
-<strong><%= event.start_date %> :
-<%= event.event_name %>
+      <% @events = Event.all %>
+      <% @events.each do |event| %>
+      <strong><%= event.start_date %> :
+      <%= event.event_name %>
 <br>
-<% end %>
 
+<% end %>
 <br>
 </body>

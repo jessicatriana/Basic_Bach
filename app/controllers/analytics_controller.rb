@@ -1,5 +1,4 @@
 class AnalyticsController < ApplicationController
 
-   
 
 end

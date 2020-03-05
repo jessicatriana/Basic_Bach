@@ -1,25 +1,20 @@
 <h1> ' </h1>
-  <br>
+<br>
 <h1>Edit Event</h1>
 <br>
 <%= form_for @event do |f| %>
-
 <%= f.label :event_name, "Event Name" %>
 <%= f.text_field :event_name %>
-<br>
-<br>
+<br><br>
 <%= f.label :description %>
 <%= f.text_area :description %>
-<br>
-<br>
+<br><br>
 <%= f.label :start_date %>
 <%= f.text_field :start_date %>
-<br>
-<br>
+<br><br>
 <%= f.label :end_date %>
 <%= f.text_field :end_date %>
-<br>
-<br>
+<br><br>
 <%= f.label :activities %>
 <%= f.collection_select :activity_ids, Activity.all, :id, :title, prompt: true, activity_ids: [] %>
 <br><br>

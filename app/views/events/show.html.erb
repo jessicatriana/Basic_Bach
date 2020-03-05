@@ -1,4 +1,3 @@
-
 <h1> ' </h1>
 <br>
 <h1><%= @event.event_name %></h1>
@@ -6,31 +5,18 @@
 <br><br>
 <strong>ACTIVITIES : </strong>
 <br>
-  <% @event.activities.each do |activity| %>
- 
-    <%= activity.title %>
-     <br>
-    <% end %>
+<% @event.activities.each do |activity| %>
+ <%= activity.title %>
 <br>
-
+<% end %>
+<br>
 <strong>RSVPs :</strong>
 <br>
-  <% @event.users.each do |user| %>
-
-    <%= user.name %>
+<% @event.users.each do |user| %>
+<%= user.name %>
 <br>
-    <% end %>
-
+<% end %>
 <br><br>
-
-
 | <%= link_to "Add Event", new_event_path %> | 
-
 <%= link_to "Edit Event",  edit_event_path %> |
-
 <%= link_to "Delete Event", @event, :method => :delete %> | 
-
-
-
-
-

@@ -1,10 +1,8 @@
 
-  <h1> ' </h1>
-  <br>
+<h1> ' </h1>
+<br>
 <h1>ACTIVITIES </h1>
 <h4>(aka excuses to day drink)</h4>
-
-
 <%= image_tag("boat.jpeg", :size => '600x300', :align=> "center")%>
 <br>
 <% @activities.each do |activity| %>
@@ -13,7 +11,4 @@
 <br>
 <% end %>
 <br><br>
-
-
 | <%= link_to "Add New Activity", new_activity_path %> | 
-
