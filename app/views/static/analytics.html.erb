@@ -41,4 +41,16 @@
 
 <% end %>
 <br>
+
+<h6><strong>* Random User *</strong></h6>
+      <%= User.order(Arel.sql('RANDOM()')).first.name %>
+<br><br>
+
+<h6><strong>* Random Event *</strong></h6>
+      <%= Event.order(Arel.sql('RANDOM()')).first.event_name%>
+<br><br>
+
+<h6><strong>* Random Activity *</strong></h6>
+      <%= Activity.order(Arel.sql('RANDOM()')).first.title %>
+<br><br>
 </body>

@@ -54,7 +54,10 @@ class EventsController < ApplicationController
     redirect_to events_path
   end
 
-  
+  def random
+    @events = Event.all
+    @events.rand(@events)
+  end
 
   private
 
